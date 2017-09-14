@@ -1,4 +1,4 @@
-##### dotfiles for my local setup
+##### Personal dotfiles
 ---------------------------------
 (from https://github.com/jaagr/dots)
 
