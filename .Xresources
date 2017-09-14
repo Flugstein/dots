@@ -1,0 +1,70 @@
+Xcursor.theme: Paper
+
+!=======================================
+! URxvt
+!=======================================
+
+! colors
+*foreground: #B0AF9D
+*background: #162029
+
+! black
+*color0:  #2E3436
+*color8:  #555753
+! red
+*color1:  #a40000
+*color9:  #EF2929
+! green
+*color2:  #4E9A06
+*color10: #8AE234
+! yellow
+*color3:  #C4A000
+*color11: #FCE94F
+! blue
+*color4:  #3465A4
+*color12: #729FCF
+! purple
+*color5:  #75507B
+*color13: #AD7FA8
+! orange (replaces cyan)
+*color6:  #ce5c00
+*color14: #fcaf3e
+! white
+*color7:  #babdb9
+*color15: #EEEEEC
+
+! set font
+*font: xft:DejavuSansMono:size=10
+
+! scrollbar style - rxvt (default), plain (most compact), next, or xterm
+URxvt*scrollstyle: plain
+
+! True: place the scrollbar on the right of the window; option -sr.
+URxvt*scrollBar_right: true
+
+! Use the specified colour for the scrollbar [default #B2B2B2].
+URxvt*scrollColor: #1B2833
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! clickable URLs
+ URxvt*perl-ext-common: default,matcher
+ URxvt*url-launcher: firefox-beta-bin
+
+! Specifies the terminal type name to be set in the TERM environment
+! (Important for SSH)
+ URxvt*termName: xterm-256color
+
+! Transparency
+! Real transparency
+ !URxvt*depth: 32
+! Fake transparency
+ !URxvt*transparent: true
+ !URxvt*shading: 30
