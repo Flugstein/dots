@@ -47,8 +47,8 @@ pin-workspaces = true
 
 ; Workspace icons
 ws-icon-0 = 10;%{T3}
-ws-icon-1 = 1;%{T3}
-ws-icon-2 = 2;%{T3}
+ws-icon-1 = 1;%{T3}
+ws-icon-2 = 2;%{T3}
 ws-icon-3 = 3;%{T3}
 ws-icon-4 = 4;%{T3}
 
