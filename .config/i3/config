@@ -161,7 +161,7 @@ bindsym $mod+r mode "resize"
 
 # Auto assignments
 assign [class="Steam"] $w10
-assign [class="Firefox"] $w2
+assign [class="Firefox"] $w1
 
 # Window fixes
 # Steam
