@@ -17,7 +17,7 @@ locale = de_AT.UTF-8
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-module-margin = 1
+module-margin = 2
 
 font-0 = DejaVu Sans:pixelsize=10;2
 font-1 = FontAwesome:size=9;2
@@ -26,10 +26,10 @@ font-3 = unifont:fontformat=truetype:size=12:antialias=false;1
 font-4 = unifont upper:fontformat=truetype:size=12:antialias=false;1
 
 modules-left = i3
-modules-center = 
+modules-center =
 modules-right = xbacklight wlan eth battery volume date powermenu
 
-tray-position = center
+tray-position = right
 tray-padding = 2
 tray-maxsize = 16
 
@@ -89,37 +89,6 @@ enable-scroll = true
 
 tray-transparent = true
 
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-[module/wlan]
-type = internal/network
-interface = wlan0
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-;format-connected-underline = ${colors.primary}
-label-connected = %essid%
-
-format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-label-disconnected = "/ wifi symbol"
-label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-
-[module/eth]
-type = internal/network
-interface = enp3s0
-interval = 3.0
-
-label-connected = "eth "
-
 [module/date]
 type = internal/date
 interval = 3.0
@@ -133,13 +102,12 @@ time = "%H:%M"
 time-alt = "%H:%M:%S"
 
 label = %date% %time%
-label-padding-left = 4
 
 [module/volume]
 type = internal/volume
 
 format-volume = %{A3:pavucontrol:}<ramp-volume> <label-volume> <bar-volume>%{A}
-label-volume = 
+label-volume =
 label-volume-foreground = ${root.foreground}
 
 format-muted-foreground = ${colors.foreground-alt}
@@ -163,10 +131,7 @@ adapter = ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-;format-charging-underline = #ffb52a
-
 format-discharging = <ramp-capacity> <label-discharging>
-;format-discharging-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -193,7 +158,7 @@ label-close = cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
-label-open-padding = 3
+label-open-padding = 2
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1

@@ -191,6 +191,7 @@ smart_gaps on
 
 # Run programs
 exec --no-startup-id pcmanfm -d
+exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id conky
 
