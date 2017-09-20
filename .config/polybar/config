@@ -27,7 +27,7 @@ font-4 = unifont upper:fontformat=truetype:size=12:antialias=false;1
 
 modules-left = i3
 modules-center =
-modules-right = xbacklight wlan eth battery volume date powermenu
+modules-right = xbacklight battery volume date powermenu
 
 tray-position = right
 tray-padding = 2
