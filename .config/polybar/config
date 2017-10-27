@@ -26,13 +26,14 @@ font-3 = unifont:fontformat=truetype:size=12:antialias=false;1
 font-4 = unifont upper:fontformat=truetype:size=12:antialias=false;1
 
 modules-left = i3
-modules-center =
-modules-right = xbacklight battery volume date powermenu
+modules-center = date
+modules-right = battery mpd volume
 
+padding-right = 2
 tray-position = right
 tray-padding = 2
 tray-maxsize = 16
-
+tray-background = ${root.background}
 wm-restack = i3
 
 scroll-up = i3wm-wsnext
@@ -91,31 +92,30 @@ tray-transparent = true
 
 [module/date]
 type = internal/date
-interval = 3.0
+interval = 5
 
 ; See "man date" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = "%a %e.%b"
-date-alt = "%a %Y-%m-%d"
+date = "%A %d %B"
+date-alt = "%A %Y-%m-%d"
 
 time = "%H:%M"
 time-alt = "%H:%M:%S"
 
-label = %date% %time%
+label = "   %time%   %date%"
 
 [module/volume]
 type = internal/volume
 
-format-volume = %{A3:pavucontrol:}<ramp-volume> <label-volume> <bar-volume>%{A}
-label-volume =
+format-volume = %{A3:pavucontrol:}<ramp-volume>%{A}
 label-volume-foreground = ${root.foreground}
 
-format-muted-foreground = ${colors.foreground}
-label-muted = "🔇 nosound"
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = "🔇 "
 
-ramp-volume-0 = 🔈
-ramp-volume-1 = 🔉
-ramp-volume-2 = 🔊
+ramp-volume-0 = "🔈"
+ramp-volume-1 = "🔉"
+ramp-volume-2 = "🔊"
 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.primary}
@@ -152,7 +152,7 @@ type = custom/menu
 
 format-spacing = 1
 
-label-open = "%{T3}"
+label-open = %{T3}
 label-open-foreground = ${colors.secondary}
 label-close = cancel
 label-close-foreground = ${colors.secondary}
@@ -171,18 +171,42 @@ menu-1-0-exec = reboot
 menu-2-0 = poweroff
 menu-2-0-exec = poweroff
 
-#[module/mpd]
-#type = internal/mpd
-#format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+[module/mpd]
+type = internal/mpd
+host = localhost
+port = 6600
+interval = 5
 
-#icon-prev = 
-#icon-stop = 
-#icon-play = 
-#icon-pause = 
-#icon-next = 
+format-online = <icon-prev><toggle><icon-next>  <label-song>
+format-playing = ${self.format-online}
+format-paused = ${self.format-online}
+format-stopped = ${self.format-online}
+format-offline = <label-offline>
 
-#label-song-maxlen = 25
-#label-song-ellipsis = true
+icon-play = ⏵
+icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+
+bar-progress-width = 20
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+
+label-offline = 🎜 mpd is offline
+label-song = %artist% - %title%
+label-time = %elapsed%/%total%
+
+toggle-on-foreground = #ff
+toggle-off-foreground = #55
+label-song-maxlen = 30
+label-song-ellipsis = true
 
 [settings]
 throttle-output = 5

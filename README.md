@@ -1,5 +1,17 @@
-##### Personal dotfiles
+## Personal dotfiles
 ---------------------------------
+My config with:
+- i3-gaps
+- polybar
+- conky
+
+Here are a few screenshots:
+
+[![sample screenshot](http://i.imgur.com/aKlWPNFt.png)](http://i.imgur.com/aKlWPNF.png)
+[![sample screenshot](http://i.imgur.com/qVHsudUt.png)](http://i.imgur.com/qVHsudU.png)
+[![sample screenshot](http://i.imgur.com/oURKHj3t.png)](http://i.imgur.com/oURKHj3.png)
+
+### Installation
 (from https://github.com/jaagr/dots)
 
 This simple yet effective technique lets you track the files you care about

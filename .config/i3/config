@@ -193,11 +193,11 @@ client.urgent           #9D1411 #9D1411 #fdf6e3 #9D1411
 gaps inner 8
 smart_gaps on
 
+# Run polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # Run programs
 exec --no-startup-id pcmanfm -d
 exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id conky
-
-# Run polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
