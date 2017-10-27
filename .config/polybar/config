@@ -110,7 +110,7 @@ format-volume = %{A3:pavucontrol:}<ramp-volume> <label-volume> <bar-volume>%{A}
 label-volume =
 label-volume-foreground = ${root.foreground}
 
-format-muted-foreground = ${colors.foreground-alt}
+format-muted-foreground = ${colors.foreground}
 label-muted = "🔇 nosound"
 
 ramp-volume-0 = 🔈

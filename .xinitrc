@@ -13,6 +13,8 @@ fi
 
 # Enable numlock on startup
 numlockx &
+# Disable touchpad
+xinput disable 11
 
 # Load .Xresources
 xrdb ~/.Xresources
