@@ -6,6 +6,7 @@ foreground-alt = #FFFFFF
 primary = #36698B
 secondary = #355458
 alert = #9D1411
+alert2 = #FF0600
 
 [bar/main]
 width = 100%
@@ -102,7 +103,7 @@ date-alt = "%A %Y-%m-%d"
 time = "%H:%M"
 time-alt = "%H:%M:%S"
 
-label = "   %time%   %date%"
+label = "%{A3:gnome-calendar:}   %time%   %date%"
 
 [module/volume]
 type = internal/volume
@@ -111,7 +112,7 @@ format-volume = %{A3:pavucontrol:}<ramp-volume>%{A}
 label-volume-foreground = ${root.foreground}
 
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = "🔇 "
+label-muted = "🔇"
 
 ramp-volume-0 = "🔈"
 ramp-volume-1 = "🔉"
@@ -128,13 +129,15 @@ bar-volume-empty = ─
 type = internal/battery
 battery = BAT0
 adapter = ADP1
-full-at = 98
+full-at = 90
 
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 
 ramp-capacity-0 = 
+ramp-capacity-0-foreground = ${colors.alert2}
 ramp-capacity-1 = 
+ramp-capacity-1-foreground = ${colors.alert2}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
@@ -146,30 +149,6 @@ animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
-
-[module/powermenu]
-type = custom/menu
-
-format-spacing = 1
-
-label-open = %{T3}
-label-open-foreground = ${colors.secondary}
-label-close = cancel
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-label-open-padding = 2
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = poweroff
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = reboot
-menu-1-0-exec = reboot
-
-menu-2-0 = poweroff
-menu-2-0-exec = poweroff
 
 [module/mpd]
 type = internal/mpd
@@ -199,7 +178,7 @@ bar-progress-indicator = |
 bar-progress-fill = ─
 bar-progress-empty = ─
 
-label-offline = 🎜 mpd is offline
+label-offline =
 label-song = %artist% - %title%
 label-time = %elapsed%/%total%
 
