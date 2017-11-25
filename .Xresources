@@ -34,7 +34,7 @@ Xcursor.theme: Paper
 *color15: #EEEEEC
 
 ! set font
-*font: xft:DejavuSansMono:size=10
+URxvt*font: xft:DejavuSansMono:size=10
 
 ! scrollbar style - rxvt (default), plain (most compact), next, or xterm
 URxvt*scrollstyle: plain
