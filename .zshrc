@@ -56,9 +56,9 @@ antigen apply
 
 # Aliases
 alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
-alias pacup='pacaur -Syu'
-alias paci='pacaur -S'
-alias pacs='pacaur -Qs'
-alias pacsr='pacaur -Ss'
-alias pacrm='pacaur -Rs'
+alias pacup='pikaur -Syu'
+alias paci='pikaur -S'
+alias pacs='pikaur -Qs'
+alias pacsr='pikaur -Ss'
+alias pacrm='pikaur -Rs'
 alias rm='rm -i'
