@@ -49,6 +49,9 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i" --display-binary --no-generic --term="urxvt"
 bindsym $mod+d exec --no-startup-id rofi -show run
 
+# Don't autofocus on mouseover
+focus_follows_mouse no
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -172,18 +175,13 @@ assign [class="Firefox"] $w1
 
 # Window fixes
 # Steam
-for_window [class="^Steam$" title="^Friends$"] floating enable
-for_window [class="^Steam$" title="Steam - News"] floating enable
-for_window [class="^Steam$" title=".* - Chat"] floating enable
-for_window [class="^Steam$" title="^Settings$"] floating enable
-for_window [class="^Steam$" title=".* - event started"] floating enable
-for_window [class="^Steam$" title=".* CD key"] floating enable
-for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
-for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
-for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
-for_window [title="^Steam Keyboard$"] floating enable
-#Pavucontrol
-for_window [class="^Pavucontrol$"] floating enable
+for_window [class="Steam"] floating enable
+# Gnome Calendar
+for_window [class="Gnome-calendar"] floating enable
+# Pavucontrol
+for_window [class="Pavucontrol"] floating enable
+# teamspeak
+#for_window [class="TeamSpeak 3"] floating enable
 
 # Colors
 # class                 border  backgr. text    indicator

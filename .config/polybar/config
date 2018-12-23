@@ -21,14 +21,15 @@ foreground = ${colors.foreground}
 module-margin = 2
 
 font-0 = DejaVu Sans:pixelsize=10;2
-font-1 = FontAwesome:size=9;2
-font-2 = FontAwesome:size=11;3
-font-3 = unifont:fontformat=truetype:size=12:antialias=false;1
-font-4 = unifont upper:fontformat=truetype:size=12:antialias=false;1
+font-1 = Font Awesome 5 Free:style=Solid:size=9;2
+font-2 = Font Awesome 5 Free:style=Regular:size=9;2
+font-3 = Font Awesome 5 Brands:style=Regular:size=9;2
+font-4 = Font Awesome 5 Brands:style=Regular:size=10;2
+font-5 = Font Awesome 5 Free:style=Regular:size=8;1
 
 modules-left = i3
 modules-center = date
-modules-right = battery mpd volume
+modules-right = mpd volume
 
 padding-right = 2
 tray-position = right
@@ -44,15 +45,15 @@ scroll-down = i3wm-wsprev
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
-wrapping-scroll = true
-pin-workspaces = true
+wrapping-scroll = false
+pin-workspaces = false
 
 ; Workspace icons
-ws-icon-0 = 10;%{T3}
-ws-icon-1 = 1;%{T3}
-ws-icon-2 = 2;%{T3}
-ws-icon-3 = 3;%{T3}
-ws-icon-4 = 4;%{T3}
+ws-icon-0 = 10;%{T5}
+ws-icon-1 = 1;%{T5}
+ws-icon-2 = 2;%{T2}
+ws-icon-3 = 3;%{T2}
+ws-icon-4 = 4;%{T2}
 
 label-mode-padding = 2
 
@@ -103,7 +104,7 @@ date-alt = "%A %Y-%m-%d"
 time = "%H:%M"
 time-alt = "%H:%M:%S"
 
-label = "%{A3:gnome-calendar:}   %time%   %date%"
+label = "%{A3:gnome-calendar:}%{T6}%{T1}   %time%   %date%"
 
 [module/volume]
 type = internal/volume
@@ -112,11 +113,11 @@ format-volume = %{A3:pavucontrol:}<ramp-volume>%{A}
 label-volume-foreground = ${root.foreground}
 
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = "🔇"
+label-muted = ""
 
-ramp-volume-0 = "🔈"
-ramp-volume-1 = "🔉"
-ramp-volume-2 = "🔊"
+ramp-volume-0 = ""
+ramp-volume-1 = ""
+ramp-volume-2 = ""
 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${colors.primary}
@@ -124,31 +125,6 @@ bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-fill = ─
 bar-volume-empty = ─
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP1
-full-at = 90
-
-format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
-
-ramp-capacity-0 = 
-ramp-capacity-0-foreground = ${colors.alert2}
-ramp-capacity-1 = 
-ramp-capacity-1-foreground = ${colors.alert2}
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
 
 [module/mpd]
 type = internal/mpd
@@ -162,16 +138,16 @@ format-paused = ${self.format-online}
 format-stopped = ${self.format-online}
 format-offline = <label-offline>
 
-icon-play = ⏵
-icon-pause = ⏸
-icon-stop = ⏹
-icon-prev = ⏮
-icon-next = ⏭
-icon-seekb = ⏪
-icon-seekf = ⏩
-icon-random = 🔀
-icon-repeat = 🔁
-icon-repeatone = 🔂
+icon-play = 
+icon-pause = 
+icon-stop = 
+icon-prev = 
+icon-next = 
+icon-seekb = 
+icon-seekf = 
+icon-random = 
+icon-repeat = 
+icon-repeatone = 1
 
 bar-progress-width = 20
 bar-progress-indicator = |
