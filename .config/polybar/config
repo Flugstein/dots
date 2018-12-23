@@ -25,9 +25,8 @@ font-0 = DejaVu Sans:pixelsize=10;2
 font-1 = Font Awesome 5 Free:style=Solid:size=9;2
 font-2 = Font Awesome 5 Free:style=Regular:size=9;2
 font-3 = Font Awesome 5 Brands:style=Regular:size=9;2
-font-4 = Font Awesome 5 Free:style=Solid:size=10;2
-font-5 = Font Awesome 5 Free:style=Regular:size=10;2
-font-6 = Font Awesome 5 Brands:style=Regular:size=10;2
+font-4 = Font Awesome 5 Brands:style=Regular:size=10;2
+font-5 = Font Awesome 5 Free:style=Regular:size=8;1
 
 modules-left = i3
 modules-center = date
@@ -51,11 +50,11 @@ wrapping-scroll = false
 pin-workspaces = false
 
 ; Workspace icons
-ws-icon-0 = 10;%{T7}
-ws-icon-1 = 1;%{T7}
-ws-icon-2 = 2;%{T5}
-ws-icon-3 = 3;%{T5}
-ws-icon-4 = 4;%{T5}
+ws-icon-0 = 10;%{T5}
+ws-icon-1 = 1;%{T5}
+ws-icon-2 = 2;%{T2}
+ws-icon-3 = 3;%{T2}
+ws-icon-4 = 4;%{T2}
 
 label-mode-padding = 2
 
@@ -106,7 +105,7 @@ date-alt = "%A %Y-%m-%d"
 time = "%H:%M"
 time-alt = "%H:%M:%S"
 
-label = "%{A3:gnome-calendar:}%{T3}%{T1}   %time%   %date%"
+label = "%{A3:gnome-calendar:}%{T6}%{T1}   %time%   %date%"
 
 [module/volume]
 type = internal/volume
@@ -136,6 +135,7 @@ full-at = 99
 
 format-charging = int: <animation-charging> <label-charging>
 format-discharging = int: <ramp-capacity> <label-discharging>
+format-full = int: <ramp-capacity> <label-full>
 
 ramp-capacity-0 = 
 ramp-capacity-0-foreground = ${colors.alert2}
@@ -161,6 +161,7 @@ full-at = 99
 
 format-charging = ext: <animation-charging> <label-charging>
 format-discharging = ext: <ramp-capacity> <label-discharging>
+format-full = ext: <ramp-capacity> <label-full>
 
 ramp-capacity-0 = 
 ramp-capacity-0-foreground = ${colors.alert2}
